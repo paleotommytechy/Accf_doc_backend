@@ -15,12 +15,11 @@ class FileUploadView(APIView):
         file_obj = request.FILES.get('file')
         if not file_obj:
             return Response({'error': 'No file uploaded'}, status=400)
-
-        temp_path = f"/data/data/ru.iiec.pydroid3/files/{file_obj.name}"
+        temp_path = os.path.join('/tmp', file_obj.name)
         with open(temp_path, 'wb+') as temp_file:
             for chunk in file_obj.chunks():
                 temp_file.write(chunk)
-
+        
         try:
             # Google credentials
             SERVICE_ACCOUNT_FILE = config('GOOGLE_SERVICE_ACCOUNT_FILE')

@@ -1,0 +1,60 @@
+/* src/components/NavbarBanner.css */
+header h1 {
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.5);
+}
+
+header p {
+  font-size: 1.1rem;
+}
+.navbar .nav-link {
+  color: white !important;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-link:hover,
+.navbar .nav-link:focus,
+.navbar .nav-link.active {
+  color: yellow !important;
+}
+@media (max-width: 768px) {
+  header {
+    height: 45vh !important;
+  }
+}
+.navbar-brand {
+  font-size: 1rem;
+  line-height: 1.2;
+  max-width: 200px;
+  white-space: normal;
+}
+.bg-purple {
+  background-color: #6f42c1 !important;
+}
+
+.navbar-toggler:hover,
+.navbar-toggler:focus {
+  background-color: orange !important;
+}
+.collapse.navbar-collapse {
+  transition: height 0.3s ease;
+}
+
+
+/* css for the church website logo */
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+
+.logo-jilem {
+  font-family: 'Pacifico', cursive;
+  font-size: 1.5rem;
+  animation: fadeIn 1.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+
+.mymt{
+    margin-top: 390px;
+}
